@@ -22,8 +22,8 @@ void n1()//Mat 클래스
 	cout << "타입 :" << img.type() << endl;
 	cout << "채널 :" << img.channels() << endl;
 	waitKey(0);
-
 }
+
 void n2()
 {
 	Mat img = imread("3.png");
@@ -31,11 +31,14 @@ void n2()
 	{
 		cout << "파일이 없음" << endl;
 	}
+	
 	imshow("lg", img);
-
+	resize(img, img, Size(10, 10));
+	imshow("Ig2", img);
 	cout << img << endl;
 	waitKey(0);
 }
+
 void n3()
 {
 	Mat M(400, 500, CV_8UC3);//* 채널 수만큼 행렬생김 
@@ -50,11 +53,11 @@ void n3()
 }
 void n4() 
 {
-	Mat A = imread("2.jpg");
+	Mat A = imread("2.png");
 	Mat B = A;
 	imshow("window 1", A);
 
-	flip(B, B, 0);
+	flip(B, B, 1);
 	imshow("window 2", A);
 	waitKey(0);
 }
@@ -113,7 +116,7 @@ void n7()
 	imshow("reshape",resh);
 	
 	
-	Mat sourceImage2 = imread("2.jpg", IMREAD_COLOR);
+	Mat sourceImage2 = imread("1.jpeg", IMREAD_COLOR);
 	Mat sourceImage3 = imread("4.jpg", IMREAD_COLOR);
 	imshow("source2", sourceImage2);
 	imshow("source3", sourceImage3);
@@ -129,7 +132,7 @@ void n7()
 
 int main()
 {
-	n7();
+	n4();
 
 	return 0;
 

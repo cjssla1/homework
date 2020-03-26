@@ -24,7 +24,7 @@ void onMouse(int event, int x, int y, int flags, void* param)
 		{
 			rectangle(img, Rect(mx1, my1, mx2 - mx1, my2 - my1), Scalar(0, 255, 0), 2);
 			imshow("image", img);
-			//img = origin.clone();
+			img = origin.clone();
 		}
 	}
 	else if (event == EVENT_LBUTTONDOWN)
